@@ -31,10 +31,10 @@ function preload(){
 function setup() {
         rectMode(CENTER)
 
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   for (var i = 0; i<50 ;i++){
     catFoodX[i] = random(mouseX-50,mouseX+50)
-    catFoodY[i] = random(-400,0)
+    catFoodY[i] = random(-windowWidth,0)
   }
 }
 
@@ -76,7 +76,7 @@ function page2(){
       }
     if (cat.xOffBoard2) {
          cat.x-=2
-        if (cat.x <= 350){
+        if (cat.x <= windowWidth-50){
           cat.xOffBoard2 = false
         } 
       }
@@ -88,7 +88,7 @@ function page2(){
       }
   if (cat.yOffBoard2) {
          cat.y-=2
-        if (cat.y <= 350){
+        if (cat.y <= windowHeight-50){
           cat.yOffBoard2 = false
         } 
       }
@@ -98,19 +98,19 @@ function page2(){
         cat.x -=  (mouseX - cat.x )/40
         cat.y -= ( mouseY - cat.y )/40
       }
-      if (cat.x > 420){
+      if (cat.x > windowWidth+20){
          cat.x = -19
         cat.xOffBoard1 = true
       } else if (cat.x < -20) {
-         cat.x = 419
+         cat.x = windowWidth+19
         cat.xOffBoard2 = true
       } 
   
-       if (cat.y > 420) {
+       if (cat.y > windowHeight+20) {
          cat.y = -19
         cat.yOffBoard1 = true
       } else if (cat.y < -20) {
-         cat.y = 419
+         cat.y = windowHeight+19
         cat.yOffBoard2 = true
       } 
   
@@ -123,7 +123,7 @@ function page2(){
       }
     if (cat.x2OffBoard2) {
          cat.x2-=2
-        if (cat.x2 <= 350){
+        if (cat.x2 <= windowWidth-50){
           cat.x2OffBoard2 = false
         } 
       }
@@ -135,7 +135,7 @@ function page2(){
       }
   if (cat.y2OffBoard2) {
          cat.y2-=2
-        if (cat.y2 <= 350){
+        if (cat.y2 <= windowHeight-50){
           cat.y2OffBoard2 = false
         } 
       }
@@ -146,19 +146,19 @@ function page2(){
         cat.y2 -= ( mouseY - cat.y2 )/40
       }
     
-      if (cat.x2 > 420){
+      if (cat.x2 > windowHeight+20){
          cat.x2 = -19
         cat.x2OffBoard1 = true
       } else if (cat.x2 < -20) {
-         cat.x2 = 419
+         cat.x2 = windowHeight+19
         cat.x2OffBoard2 = true
       } 
   
-       if (cat.y2 > 420) {
+       if (cat.y2 > windowHeight+20) {
          cat.y2 = -19
         cat.y2OffBoard1 = true
       } else if (cat.y2 < -20) {
-         cat.y2 = 419
+         cat.y2 = windowHeight+19
         cat.y2OffBoard2 = true
       } 
       // cat.y%=400
@@ -175,7 +175,7 @@ function page3(){
       fill(150,42,42)
       circle(catFoodX[i], catFoodY[i],10);
       
-      if(catFoodY[i]>400){
+      if(catFoodY[i]>windowHeight){
          if(catFoodX[i]>=catBowlX-75&&catFoodX[i]<=catBowlX+75){
           catFoodScore++
           
@@ -187,10 +187,10 @@ function page3(){
     text('Cat food in bowl: '+ catFoodScore,20,20);
   }
   catBowlX+=catBowlChange
-  if(catBowlX>=325||catBowlX<=75){
+  if(catBowlX>=windowWidth-75||catBowlX<=75){
     catBowlChange*=-1
     //catBowlChange*=-(Math.random()+0.1)
   }
-  rect(catBowlX,450,150)
+  rect(catBowlX,windowHeight+50,150)
   
 }
