@@ -1,15 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8" />
     <title>WebGL Demo</title>
-    <script src="webgl-demo.js" type="module"></script>
+    <link rel="stylesheet" href="./webgl.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
+      integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="
+      crossorigin="anonymous"
+      defer></script>
+    <script src="webgl-demo.js" type="module"></script>
   </head>
+
   <body>
-    <a href="https://sourdouh.github.io/index.html">
-      <button class = "button">Back</button>
+      <a href="https://sourdouh.github.io/webGLDemo.html">
+      <button class = "button">webGLDemo</button>
     </a>
     <canvas id="glcanvas" width="640" height="480"></canvas>
   </body>
