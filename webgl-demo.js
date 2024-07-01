@@ -21,6 +21,7 @@ function main() {
       gl_FragColor = vec4(1.0, 1.0, 1.0, 1.0);
     }
   `;
+  const shaderProgram = initShaderProgram(gl, vsSource, fsSource);
 
   // Only continue if WebGL is available and working
   if (gl === null) {
