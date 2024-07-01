@@ -1,3 +1,6 @@
+import { initBuffers } from "./init-buffers.js";
+import { drawScene } from "./draw-scene.js";
+
 main();
 
 //
@@ -49,6 +52,12 @@ const programInfo = {
   gl.clearColor(0.0, 0.0, 0.0, 1.0);
   // Clear the color buffer with specified clear color
   gl.clear(gl.COLOR_BUFFER_BIT);
+  // Here's where we call the routine that builds all the
+// objects we'll be drawing.
+const buffers = initBuffers(gl);
+
+// Draw the scene
+drawScene(gl, programInfo, buffers);
 }
 //
 // Initialize a shader program, so WebGL knows how to draw our data
