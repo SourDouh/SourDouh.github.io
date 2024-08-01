@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+  }
+  .button {
+    background-color: black; /* Green */
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+    margin: 0px 0px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: calc(30% - 1200px);;
+    min-width: 220px;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 42px;
+  }
+
+  .button:hover {
+    background-color: white;
+    color: black;
+  }
+
+  .button2 {
+    padding: 5px 3px;
+    width: 48px;
+    min-width: 5px;
+    margin: 0px 0px;
+    vertical-align: bottom;
+  }
+  .button2:hover {
+    content: url('icons/ShoppingCartBlack.png');
+  }
+
+  input[type=text], select{
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 3px 5px;
+    margin: 15px 15px;
+    border-radius: 15px;
+    width: 147px;
+  }

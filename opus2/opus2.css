@@ -1,0 +1,12 @@
+.frosted-glass{
+    box-shadow: 0 0 5px 0 ;
+    background: inherit;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    min-width: max-content
+}
+
+.object-width{
+    width: 44%;
+    min-width: max-content;
+}
