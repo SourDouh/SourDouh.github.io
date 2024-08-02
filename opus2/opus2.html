@@ -8,9 +8,21 @@
     <link rel="stylesheet" type="text/css" href="bootstrap.css">
     <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
     <script type="text/javascript" src="bootstrap.js"></script>
+    <script type="importmap">
+        {
+          "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@<v0.167.1>/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@<v0.167.1>/examples/jsm/"
+          }
+        }
+      </script>
+      <script>glasses.js</script>
 </head>
 
 <body>
+    <section id="fixed-top glasses">
+        <!--3d glasses go here-->
+    </section>
     <nav id="navbar-example2" class="navbar bg-body-tertiary px-3 mb-3 fixed-top  ">
         <a class="navbar-brand" href="#">Navbar</a>
         <ul class="nav nav-pills">
