@@ -1,0 +1,63 @@
+.frosted-glass {
+    box-shadow: 0 0 5px 0;
+    background: inherit;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+.widthSetting {
+    width: 50%;
+    min-width: 400px;
+}
+
+.widthSettingImage {
+    width: 30%;
+    height: fit-content;
+    /* min-width: 180px; */
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 16px;
+    left: 8px;
+}
+
+.bottom-left.fs-6 {
+    position: absolute;
+    bottom: 0px;
+}
+
+.griddy {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+
+
+}
+
+.down-50 {
+
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    .down-50 {
+        &:nth-child(even) {
+            top: 50%;
+        }
+    }
+}
+
+@media only screen and (min-width: 1001px) {
+    .griddy {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .down-50 {
+        &:nth-child(3n-1) {
+            top: 50%;
+        }
+    }
+
+}
